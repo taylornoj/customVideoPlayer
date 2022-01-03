@@ -46,8 +46,11 @@ function handleProgress() {
   progressBar.style.flexBasis = `${percent}%`;
 }
 
+// ability to click along progress bar and change time of video
 function scrub(e) {
+  // ( ) gives us a percentage then * by video duration
   const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
+  // then update the video
   video.currentTime = scrubTime;
 }
 
