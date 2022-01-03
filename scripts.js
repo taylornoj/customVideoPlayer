@@ -40,6 +40,12 @@ function handleRangeUpdate() {
   // console.log(this.value);
 }
 
+// match progress bar to length of video
+function handleProgress() {
+  const percent = (video.currentTime / video.duration) * 100;
+  progressBar.style.flexBasis = `${percent}%`;
+}
+
 // -------TODO: hook up event listeners
 
 // click on video to play and pause
@@ -47,6 +53,8 @@ video.addEventListener('click', togglePlay);
 // listen for when video is playing or paused
 video.addEventListener('play', updateButton);
 video.addEventListener('pause', updateButton);
+// shows progress bar in line with time of video
+video.addEventListener('timeupdate', handleProgress);
 
 // add functionality to buttons
 toggle.addEventListener('click', togglePlay);
