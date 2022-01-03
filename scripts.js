@@ -30,7 +30,11 @@ function skip() {
   // dataset has skip value (-10/25) in it
   // parseFloat to convert string into true number
   video.currentTime += parseFloat(this.dataset.skip);
+}
 
+// listen for a change on sliders
+function handleRangeUpdate() {
+  console.log(this.value);
 }
 
 // -------TODO: hook up event listeners
@@ -44,3 +48,4 @@ video.addEventListener('pause', updateButton);
 // add functionality to buttons
 toggle.addEventListener('click', togglePlay);
 skipButtons.forEach(button => button.addEventListener('click', skip));
+ranges.forEach(range => range.addEventListener('change', handleRangeUpdate));
