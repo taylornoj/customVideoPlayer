@@ -34,7 +34,10 @@ function skip() {
 
 // listen for a change on sliders
 function handleRangeUpdate() {
-  console.log(this.value);
+  video[this.name] = this.value;
+  // .name is property (volume or playbackRate) so it is equal to value on either range
+  // console.log(this.name);
+  // console.log(this.value);
 }
 
 // -------TODO: hook up event listeners
