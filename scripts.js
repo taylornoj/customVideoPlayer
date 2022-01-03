@@ -1,4 +1,4 @@
-// TODO: get elements
+// -------TODO: get elements
 const player = document.querySelector('.player');
 const video = player.querySelector('.viewer');
 const progress = player.querySelector('.progress');
@@ -7,7 +7,7 @@ const toggle = player.querySelector('.toggle');
 const skipButtons = player.querySelectorAll('[data-skip');
 const ranges = player.querySelectorAll('.player__slider');
 
-// TODO: build functions
+// -------TODO: build functions
 
 // plays and pauses movie
 function togglePlay() {
@@ -25,8 +25,13 @@ function updateButton() {
   toggle.textContent = icon;
 }
 
+// how much is video actually going to be skipped
+function skip() {
+  console.log("Skipping!")
 
-// TODO: hook up event listeners
+}
+
+// -------TODO: hook up event listeners
 
 // click on video to play and pause
 video.addEventListener('click', togglePlay);
@@ -36,3 +41,5 @@ video.addEventListener('pause', updateButton);
 
 // add functionality to play button
 toggle.addEventListener('click', togglePlay);
+
+skipButtons.forEach(button => button.addEventListener('click', skip));
