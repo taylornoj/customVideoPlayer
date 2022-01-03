@@ -27,7 +27,9 @@ function updateButton() {
 
 // how much is video actually going to be skipped
 function skip() {
-  console.log("Skipping!")
+  // dataset has skip value (-10/25) in it
+  // parseFloat to convert string into true number
+  video.currentTime += parseFloat(this.dataset.skip);
 
 }
 
@@ -39,7 +41,6 @@ video.addEventListener('click', togglePlay);
 video.addEventListener('play', updateButton);
 video.addEventListener('pause', updateButton);
 
-// add functionality to play button
+// add functionality to buttons
 toggle.addEventListener('click', togglePlay);
-
 skipButtons.forEach(button => button.addEventListener('click', skip));
