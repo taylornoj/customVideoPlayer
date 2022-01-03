@@ -21,4 +21,8 @@ function togglePlay() {
 
 // TODO: hook up event listeners
 
+// click on video to play and pause
 video.addEventListener('click', togglePlay);
+
+// add functionality to play button
+toggle.addEventListener('click', togglePlay);
