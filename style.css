@@ -10,9 +10,9 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  background: #7A419B;
+  background: #424142;
   min-height: 100vh;
-  background: linear-gradient(135deg, #7c1599 0%,#921099 48%,#7e4ae8 100%);
+  background-image: radial-gradient(circle, #676366, #625f63, #5e5c60, #59585c, #545559, #4f5054, #494c4f, #44474a, #3d4143, #373a3c, #313435, #2c2e2e);
   background-size: cover;
   align-items: center;
   justify-content: center;
