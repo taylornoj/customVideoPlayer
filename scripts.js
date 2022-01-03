@@ -18,11 +18,19 @@ function togglePlay() {
   }
 }
 
+//to recognize pause - regardless of how user paused the video
+function updateButton() {
+  console.log('Update the button');
+}
+
 
 // TODO: hook up event listeners
 
 // click on video to play and pause
 video.addEventListener('click', togglePlay);
+// listen for when video is playing or paused
+video.addEventListener('play', updateButton);
+video.addEventListener('pause', updateButton);
 
 // add functionality to play button
 toggle.addEventListener('click', togglePlay);
