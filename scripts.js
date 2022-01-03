@@ -20,7 +20,9 @@ function togglePlay() {
 
 //to recognize pause - regardless of how user paused the video
 function updateButton() {
-  console.log('Update the button');
+  // we can use 'this' because it is bound to the video itself through add event listener
+  const icon = this.paused ? '►' : '❚ ❚';
+  toggle.textContent = icon;
 }
 
 
