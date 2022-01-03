@@ -54,6 +54,8 @@ function scrub(e) {
   video.currentTime = scrubTime;
 }
 
+
+
 // -------TODO: hook up event listeners
 
 // click on video to play and pause
@@ -69,4 +71,11 @@ toggle.addEventListener('click', togglePlay);
 skipButtons.forEach(button => button.addEventListener('click', skip));
 ranges.forEach(range => range.addEventListener('change', handleRangeUpdate));
 ranges.forEach(range => range.addEventListener('mousemove', handleRangeUpdate));
+
+let mousedown = false;
 progress.addEventListener('click', scrub);
+// click and drag on progress bar
+progress.addEventListener('mousemove', (e) => mousedown && scrub(e)); 
+
+progress.addEventListener('mousedown', () => mousedown = true);
+progress.addEventListener('mouseup', () => mousedown = false);
