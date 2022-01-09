@@ -10,3 +10,5 @@ In this project we created a video player with features to adjust volume and pla
 - how to create a fullscreen option; this was a stretch feature I decided to add to the project
 - the capabilities of the .paused property
 - how to match the progress bar with the corresponding time of the video clip using the .currentTime property
+
+You can try out my custom video player here: https://taylornoj.github.io/customVideoPlayer/
